@@ -1,4 +1,5 @@
 # Spring Bootiful Authorization Server
+[![Build Status](https://travis-ci.com/tschmitz-dev/bootiful-authorization-server.svg?branch=master)](https://travis-ci.com/tschmitz-dev/bootiful-authorization-server)
 
 A simple OAuth2 Authorization Server that provides an in-memory client details service with only one client. 
 
