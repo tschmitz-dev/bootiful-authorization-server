@@ -10,8 +10,8 @@ spring:
 
 oauth:
   server:
-    client-id: ce920188d47a2f51d7c6
-    client-secret: 8b562ac7f64785c96a5d207f4a6cc13725a06cbb
+    client-id: ${CLIENT_ID:ce920188d47a2f51d7c6}
+    client-secret: ${CLIENT_SECRET:8b562ac7f64785c96a5d207f4a6cc13725a06cbb}
     authorized-grant-types: password,authorization_code,refresh_token
     scopes: read
     refresh-token-validity-seconds: 2592000 # 30 days
