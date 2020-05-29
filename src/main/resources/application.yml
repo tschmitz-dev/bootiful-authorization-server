@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    platform: h2
+
+oauth:
+  server:
+    client-id: ce920188d47a2f51d7c6
+    client-secret: 8b562ac7f64785c96a5d207f4a6cc13725a06cbb
+    authorized-grant-types: password,authorization_code,refresh_token
+    scopes: read
+    refresh-token-validity-seconds: 2592000 # 30 days
+    access-token-validity-seconds: 43200    # 12 hours
+
+---
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/bookmarks
+    username: postgres
+    password: <todo>
+    platform: postgres
+
+oauth:
+  server:
+    client-id: ce920188d47a2f51d7c6
+    client-secret: 8b562ac7f64785c96a5d207f4a6cc13725a06cbb
+    authorized-grant-types: password,authorization_code,refresh_token
+    scopes: read,write
+    resource-ids: api
+    refresh-token-validity-seconds: 2592000 # 30 days
+    access-token-validity-seconds: 43200    # 12 hours
