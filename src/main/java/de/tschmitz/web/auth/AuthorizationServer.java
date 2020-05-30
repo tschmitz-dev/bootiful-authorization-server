@@ -14,7 +14,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 @SpringBootApplication
 @Configuration
 @EnableConfigurationProperties(OAuthProperties.class)
-public class AuthorizationServerApplication {
+public class AuthorizationServer {
 
     @Bean
     @Qualifier("jwtTokenEnhancer")
@@ -23,6 +23,6 @@ public class AuthorizationServerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(AuthorizationServerApplication.class, args);
+        SpringApplication.run(AuthorizationServer.class, args);
     }
 }

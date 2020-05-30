@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * Integration test that demonstrates how to obtain a token.
  */
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-class AuthorizationServerApplicationTests {
+class AuthorizationServerTests {
 
     @LocalServerPort
     private int port;
